@@ -1,1 +1,17 @@
-{{ content }}
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_path }}" />
+<main class="ml-main">
+{% if page.title %}
+	<h1 class="ml-title">{{ page.title }}</h1>
+{% endif %}
+<details class="ml-drawer">
+	<summary>三</summary>
+	<div class="ml-drawer-inside">
+		{% include bookmark.html %}
+		{% include toc.html html=content class='ml-toc' %}
+	</div>
+</details>
+<article class="ml-article">
+	{{ content }}
+</article>
+</main>
+
