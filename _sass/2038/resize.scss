@@ -1,0 +1,24 @@
+$header-height: 112px !default;
+
+.ml-main {
+	margin: $header-height auto 0;	
+}
+
+@media (min-width: 1440px) {
+	.ml-main {
+		max-width: 67%; 
+	}
+}
+
+@media (max-width: 1439px) {
+	.ml-main {
+		max-width: 960px;
+	}
+}
+
+@media (max-width: 960px) {
+	.ml-main {
+		margin: $header-height 10px 0;
+	}
+}
+

@@ -1,0 +1,70 @@
+$transition-time: 10.4s !default;
+$mobile-width: 24em;
+$mobile-opacity: .7;
+
+.ml-drawer {
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 10px;
+
+	& {
+		height: 2rem;
+		overflow: hidden;
+		transition: height $transition-time;
+	}
+
+	&[open] {
+		height: 100%;
+		transition: height $transition-time;
+	}
+
+	&[open] summary {
+		transform: rotate(-90deg);
+		transition: transform $transition-time;
+	}
+
+	summary {
+		color: grey;
+		width: 2rem;
+		height: 2rem;	
+		font-size: 2rem;
+		transition: transform $transition-time;
+
+		&::marker {
+			content: '';
+		}
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	a {
+		color: red;
+	}
+}
+
+@import '2038/colour';
+
+@media (max-width: 1279px) {
+	.ml-drawer[open] {
+		width: 100%;
+		opacity: $mobile-opacity;
+		background: $light-bgcolour;
+	}
+
+	.ml-drawer-inside {
+		max-width: $mobile-width;
+		margin: 112px auto 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ml-drawer {
+		&, &[open], summary, &[open] summary {
+			transition: all 0s;
+		}
+	}
+}
+
