@@ -2,6 +2,6 @@
 
 ---
 
-@import '2038/init.scss';
-@import '2038/colour.scss';
+@import	'2038/colour/{{ site.theme-2038.skin | default: "auto" }}',
+	'2038/init.scss';
 

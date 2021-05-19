@@ -1,38 +1,38 @@
-$transition-time: 10.4s !default;
-$mobile-width: 24em;
-$mobile-opacity: .7;
+$transition-time: .4s	!default;
+$mobile-width: 24em	!default;
+$mobile-opacity: .7	!default;
 
 .ml-drawer {
 	position: fixed;
 	left: 0;
 	top: 0;
 	padding: 10px;
-
-	& {
-		height: 2rem;
-		overflow: hidden;
-		transition: height $transition-time;
-	}
+	min-width: 150px;
+	height: 2rem;
+	overflow: hidden;
 
 	&[open] {
 		height: 100%;
-		transition: height $transition-time;
 	}
 
 	&[open] summary {
 		transform: rotate(-90deg);
-		transition: transform $transition-time;
 	}
 
 	summary {
 		color: grey;
 		width: 2rem;
-		height: 2rem;	
+		height: 2rem;
+		text-align: center;	
+		line-height: 2rem;
 		font-size: 2rem;
-		transition: transform $transition-time;
 
 		&::marker {
 			content: '';
+		}
+
+		&:hover {
+			transform: rotate(-10deg);
 		}
 	}
 
@@ -41,30 +41,43 @@ $mobile-opacity: .7;
 	}
 
 	a {
-		color: red;
+		text-decoration: none;
 	}
+
 }
 
-@import '2038/colour';
-
-@media (max-width: 1279px) {
+@media screen and (max-width: 1279px) {
 	.ml-drawer[open] {
 		width: 100%;
-		opacity: $mobile-opacity;
-		background: $light-bgcolour;
 	}
 
 	.ml-drawer-inside {
 		max-width: $mobile-width;
-		margin: 112px auto 0;
+		margin: 56px auto 0;
 	}
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media screen and (prefers-reduced-motion: no-preference) {
 	.ml-drawer {
-		&, &[open], summary, &[open] summary {
-			transition: all 0s;
+		transition: height $transition-time;
+		summary {
+			transition: transform $transition-time;
 		}
+	}
+	.ml-bookmark li {
+		transition: background $transition-time;
+	}
+}
+
+.ml-bookmark {
+	text-align: center;
+	width: 100%;
+	padding: 0 1em;
+
+	a {
+		display: block;
+		width: 100%;
+		line-height: 2.5rem;
 	}
 }
 

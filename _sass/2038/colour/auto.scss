@@ -1,0 +1,5 @@
+@import	'2038/colour/light';
+
+@media screen and (prefers-color-scheme: dark) {
+	@import	'2038/colour/dark';
+}
