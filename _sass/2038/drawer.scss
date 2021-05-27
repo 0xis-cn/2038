@@ -6,12 +6,12 @@ $mobile-opacity: .7	!default;
 	position: fixed;
 	left: 0;
 	top: 0;
-	padding: 10px;
-	height: 2rem;
-	overflow: hidden;
+	padding: 3em 10px;
+	height: 3rem;
 
 	&[open] {
 		height: 100%;
+		overflow: auto;
 	}
 
 	&[open] .ml-menu-button {
@@ -19,6 +19,9 @@ $mobile-opacity: .7	!default;
 	}
 
 	.ml-menu-button {
+		position: fixed;
+		top: 10px;
+		left: 10px;
 		width: 2rem;
 		height: 2rem;
 		text-align: center;	
@@ -40,12 +43,13 @@ $mobile-opacity: .7	!default;
 }
 
 .ml-bookmark li {
-	font-size: 1.1em
+	font-size: 1.05em
 }
 
 @media screen and (max-width: 1300px) {
 	.ml-drawer[open] {
 		width: 100%;
+		z-index: 10;
 	}
 
 	.ml-drawer-inside {
@@ -77,17 +81,6 @@ $mobile-opacity: .7	!default;
 	}
 }
 
-.ml-bookmark {
-	text-align: center;
-	width: 100%;
-	padding: 1em;
-
-	a {
-		display: block;
-		width: 100%;
-		line-height: 2.5em;
-	}
-}
 
 .ml-toc ul {
 	margin: 0;
@@ -104,11 +97,24 @@ $mobile-opacity: .7	!default;
 }
 
 .ml-toc-sub > li {
-	margin: .4em 0
+	margin: .8em 0
 }
 
 .ml-toc-1 > .ml-toc-sub, .ml-toc-2 > .ml-toc-sub {
 	padding-left: 0;
 	margin: .5em 0 1em
+}
+
+.ml-bookmark {
+	margin-bottom: 1em;
+	text-align: center;
+	width: 80%;
+	padding: 1em;
+
+	a {
+		display: block;
+		width: 100%;
+		line-height: 2.5em;
+	}
 }
 

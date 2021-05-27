@@ -7,7 +7,7 @@ $middle-width: 960px !default;
 }
 
 .ml-drawer {
-	padding-right: ($middle-width / 2)
+	padding-right: ($middle-width / 2) + 10px
 }
 
 @media (min-width: 1600px) {
@@ -15,7 +15,7 @@ $middle-width: 960px !default;
 		max-width: 60%;
 	}
 	.ml-drawer {
-		padding-right: -30%
+		padding-right: -32%
 	}
 }
 

@@ -15,6 +15,15 @@ body {
 	}
 }
 
+.ml-footer-copyright {
+	margin: 0;
+	font-size: .9em;
+}
+
+.ml-footer-copyright, .ml-footer-links li::before {
+	color: fade-out($base-colour, .4);
+}
+
 .ml-drawer a, .ml-social-list .svg-icon {
 	color: fade-out($base-colour, .4);
 
@@ -35,10 +44,6 @@ body {
 	background: fade-out($base-colour, .9);
 }
 
-.ml-footer {
-	background: fade-out($bgcolour, .3)
-}
-
 .ml-toc-1 > a, .ml-toc-2 > a {
 	color: fade-out($base-colour, .2);
 }
@@ -47,5 +52,9 @@ body {
 	@media screen and (prefers-reduced-motion: no-preference) {
 		transition: background, color $link-change-time;
 	}
+}
+
+.ml-footer-main {
+	background: fade-out($bgcolour, .3)
 }
 

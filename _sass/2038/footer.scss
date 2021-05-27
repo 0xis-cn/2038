@@ -19,7 +19,28 @@ $icon-size: 1.8em;
 }
 
 .ml-footer-main {
-	margin: 3em;
+	padding: 2em;
+}
+
+.ml-footer-links {
+	text-align: center;
+	line-height: 2rem;
+
+	li {
+		font-size: 1.05em;
+		list-style: none;
+		display: inline-block;
+
+	}
+
+	li::before {
+		margin: 0 6px;
+		content: 'ㆍ';
+	}
+
+	li:first-child::before {
+		content: '';
+	}
 }
 
 .svg-icon {
@@ -35,5 +56,9 @@ $icon-size: 1.8em;
 	.ml-footer {
 		z-index: 10;
 	}
+}
+
+.ml-wordmark {
+	float: left;
 }
 
