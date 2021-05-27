@@ -1,4 +1,8 @@
-$bgcolour: 	#212322;
+.ml-wordmark {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+$bgcolour: 	black;
 $base-colour:	white;
 
 @import '2038/colour-relative';

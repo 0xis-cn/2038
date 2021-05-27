@@ -1,12 +1,22 @@
-html, body {
+body, .ml-info {
+	font: 400 12pt / 1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
 	scroll-behavior: smooth;
-	font: 400 12pt / 1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	min-height: 80%;
+}
+
+.ml-article {
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
 @media print {
 	body {
-		font-family: 'Noto Serif CJK SC', serif, "Apple Color Emoji",
-			"Segoe UI Emoji", "Segoe UI Symbol";
+		font: 400 12pt / 1.7 'Noto Serif CJK SC', serif,
+			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		background: white;
 		color: black;
 	}

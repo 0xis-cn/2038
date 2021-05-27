@@ -1,0 +1,39 @@
+.ml-footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	min-height: 6rem;
+}
+
+$icon-size: 1.8em;
+
+.ml-social-list {
+	padding: 0
+}
+
+.ml-social-list li {
+	list-style: none;
+	margin: 6px;
+	display: inline-block;
+	float: right
+}
+
+.ml-footer-main {
+	margin: 3em;
+}
+
+.svg-icon {
+	width: $icon-size;
+	height: $icon-size;
+	display: inline-block;
+	fill: currentColor;
+	padding: 5px 3px 2px 5px;
+	vertical-align: text-bottom;
+}
+
+@media screen and (min-width: 1280px) {
+	.ml-footer {
+		z-index: 10;
+	}
+}
+

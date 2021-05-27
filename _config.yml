@@ -1,2 +1,13 @@
-theme: null
+title: Your Awesome Site
+author: 物灵
+
+theme-2038:
+        wordmark: /assets/wordmark.svg
+        from-year: 2038
+        license: 知识共享署名 4.0 国际
+        footer-desc: 铁可折，玉可碎，海可枯。不论穷达生死，直节贯殊途。（汪莘）
+        social:
+                github: 0xis-cn 
+                instagram: mat__ling
+                telegram: cn_0xis
 

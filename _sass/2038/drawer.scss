@@ -7,7 +7,6 @@ $mobile-opacity: .7	!default;
 	left: 0;
 	top: 0;
 	padding: 10px;
-	min-width: 150px;
 	height: 2rem;
 	overflow: hidden;
 
@@ -15,12 +14,11 @@ $mobile-opacity: .7	!default;
 		height: 100%;
 	}
 
-	&[open] summary {
+	&[open] .ml-menu-button {
 		transform: rotate(-90deg);
 	}
 
-	summary {
-		color: grey;
+	.ml-menu-button {
 		width: 2rem;
 		height: 2rem;
 		text-align: center;	
@@ -30,23 +28,22 @@ $mobile-opacity: .7	!default;
 		&::marker {
 			content: '';
 		}
-
-		&:hover {
-			transform: rotate(-10deg);
-		}
-	}
-
-	li {
-		list-style-type: none;
 	}
 
 	a {
 		text-decoration: none;
 	}
 
+	ul {
+		list-style-type: none;
+	}
 }
 
-@media screen and (max-width: 1279px) {
+.ml-bookmark li {
+	font-size: 1.1em
+}
+
+@media screen and (max-width: 1300px) {
 	.ml-drawer[open] {
 		width: 100%;
 	}
@@ -54,6 +51,17 @@ $mobile-opacity: .7	!default;
 	.ml-drawer-inside {
 		max-width: $mobile-width;
 		margin: 56px auto 0;
+	}
+}
+
+@media screen and (min-width: 1301px) {
+	.ml-toc {
+		font-size: .9em
+	}
+
+	.ml-drawer {
+		width: 50%;
+		box-sizing: border-box
 	}
 }
 
@@ -72,12 +80,35 @@ $mobile-opacity: .7	!default;
 .ml-bookmark {
 	text-align: center;
 	width: 100%;
-	padding: 0 1em;
+	padding: 1em;
 
 	a {
 		display: block;
 		width: 100%;
-		line-height: 2.5rem;
+		line-height: 2.5em;
 	}
+}
+
+.ml-toc ul {
+	margin: 0;
+	line-height: 1.1em
+}
+
+.ml-toc, .ml-toc-sub, .ml-bookmark {
+	margin: 0;
+	padding: 0;
+}
+
+.ml-toc, .ml-toc-sub  {
+	padding-left: 1em;
+}
+
+.ml-toc-sub > li {
+	margin: .4em 0
+}
+
+.ml-toc-1 > .ml-toc-sub, .ml-toc-2 > .ml-toc-sub {
+	padding-left: 0;
+	margin: .5em 0 1em
 }
 

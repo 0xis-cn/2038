@@ -2,14 +2,10 @@
 {%- assign info-array = site.data.theme-2038-i18n | map: lang -%}
 {%- assign info = info-array[0] -%}
 
-<link rel="stylesheet" href="{{ '/assets/main.css' | relative_path }}" />
-<main class="ml-main">
-{% if page.title %}
-	<h1 class="ml-title">{{ page.title }}</h1>
-{% endif %}
-{% include drawer.html %}
-<article class="ml-article">
-	{{ content }}
-</article>
-</main>
-
+<html lang="{{ lang }}">
+  {%- include head.html -%}
+  <body>
+    {{ content }}
+  </body>
+  {%- include footer.html %}
+</html>

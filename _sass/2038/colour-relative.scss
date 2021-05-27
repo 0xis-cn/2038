@@ -9,13 +9,13 @@ body {
 	color: fade-out($base-colour, .3);
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1300px) {
 	.ml-drawer[open] {
 		background: fade-out($bgcolour, .15);
 	}
 }
 
-.ml-drawer a {
+.ml-drawer a, .ml-social-list .svg-icon {
 	color: fade-out($base-colour, .4);
 
 	@media screen and (prefers-reduced-motion: no-preference) {
@@ -27,11 +27,23 @@ body {
 	}
 }
 
-.ml-bookmark a {
-	&:hover {
-		background: fade-out($base-colour, .8);
-	}
+.ml-drawer summary {
+	color: fade-out($base-colour, .3);
+}
 
+.ml-drawer summary:hover, .ml-bookmark a:hover {
+	background: fade-out($base-colour, .9);
+}
+
+.ml-footer {
+	background: fade-out($bgcolour, .3)
+}
+
+.ml-toc-1 > a, .ml-toc-2 > a {
+	color: fade-out($base-colour, .2);
+}
+
+.ml-bookmark a {
 	@media screen and (prefers-reduced-motion: no-preference) {
 		transition: background, color $link-change-time;
 	}

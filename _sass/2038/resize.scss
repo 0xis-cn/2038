@@ -1,18 +1,21 @@
 $header-height: 112px !default;
+$middle-width: 960px !default;
 
 .ml-main {
 	margin: $header-height auto 0;	
+	max-width: $middle-width
 }
 
-@media (min-width: 1440px) {
+.ml-drawer {
+	padding-right: ($middle-width / 2)
+}
+
+@media (min-width: 1600px) {
 	.ml-main {
-		max-width: 67%; 
+		max-width: 60%;
 	}
-}
-
-@media (max-width: 1439px) {
-	.ml-main {
-		max-width: 960px;
+	.ml-drawer {
+		padding-right: -30%
 	}
 }
 

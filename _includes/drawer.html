@@ -3,11 +3,14 @@
 {%- assign info = info-array[0] -%}
 
 <details class="ml-drawer">
-	<summary>≡</summary>
+	<summary class="ml-menu-button">≡</summary>
 	<div class="ml-drawer-inside">
 		{% include bookmark.html %}
-		<span class="ml-info">{{ info.toc }}</span>
-		{% include toc.html html=content class='ml-toc' %}
+		<details open>
+			<summary>{{ info.toc }}</summary>
+			{% include toc.html html=content class='ml-toc'
+				submenu_class='ml-toc-sub' item_class='ml-toc-%level%' %}
+		</details>
 	</div>
 </details>
 

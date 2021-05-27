@@ -1,3 +1,12 @@
 cmn-Hans:
+        main-page: 首页
         toc: 目录
+        license: 除非另有声明，以上内容采用LICENSE协议提供。
+        copyright: 版权所有 ©
+
+en:
+        main-page: Main page
+        toc: Table of Content
+        license: The content is available under LICENSE license unless otherwise specified.
+        copyright: Copyright ©
 

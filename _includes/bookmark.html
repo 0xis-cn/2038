@@ -1,9 +1,15 @@
+{%- assign lang = page.lang | default: site.lang | default: 'cmn-Hans' -%}
+{%- assign info-array = site.data.theme-2038-i18n | map: lang -%}
+{%- assign info = info-array[0] -%}
+
 <ul class="ml-bookmark">
-	<li><a href="{{ '/' | relative_url }}">Main page</a></li>
-	<li><a href="{{ '/' | relative_url }}">宇宙洪荒</a></li>
-	<li><a href="{{ '/' | relative_url }}">日月</a></li>
-	<li><a href="{{ '/' | relative_url }}">盈</a></li>
-	<li><a href="{{ '/' | relative_url }}">昃</a></li>
-	<li><a href="{{ '/' | relative_url }}">Main page</a></li>
+	<li>
+		<a href="{{ '/' | relative_url }}">
+			{{ info.main-page }}
+		</a>
+	</li>
+	<li><a>哈哈哈</a></li>
+	<li><a>哈哈</a></li>
+	<li><a>哈哈</a></li>
 </ul>
 

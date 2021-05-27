@@ -1,0 +1,27 @@
+{%- assign lang = page.lang | default: site.lang | default: 'cmn-Hans' -%}
+{%- assign info-array = site.data.theme-2038-i18n | map: lang -%}
+{%- assign info = info-array[0] -%}
+{%- assign t2038 = site.theme-2038 -%}
+
+<footer class="ml-footer">
+	<aside class="ml-footer-main">
+		{%- include social.html -%}
+		{%- if t2038.wordmark -%}
+			<img alt="{{ site.title }}" class="ml-wordmark" src="{{ t2038.wordmark }}" />
+		{%- endif -%}
+		{%- if t2038.footer-desc -%}
+			<p class="ml-footer-desc">{{ t2038.footer-desc }}</p>
+		{%- endif -%}
+		{%- if t2038.from-year -%}
+			<p class="ml-footer-copyright">
+				{{ info.copyright }} {{ site.author }} {{ t2038.from-year }}—{{ 'now' | date: '%Y' }}
+			</p>
+		{%- endif -%}
+		{%- if t2038.license -%}
+			<p class="ml-footer-copyright">
+				{{ info.license | replace: 'LICENSE', t2038.license }}
+			</p>
+		{%- endif -%}
+	</aside>
+</footer>
+
