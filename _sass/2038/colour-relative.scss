@@ -20,7 +20,7 @@ body {
 	font-size: .9em;
 }
 
-.ml-footer-copyright, .ml-footer-links li::before {
+.ml-footer-copyright, .ml-footer-links li {
 	color: fade-out($base-colour, .4);
 }
 

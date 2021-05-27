@@ -25,6 +25,7 @@ $icon-size: 1.8em;
 .ml-footer-links {
 	text-align: center;
 	line-height: 2rem;
+	padding: 0;
 
 	li {
 		font-size: 1.05em;
@@ -52,9 +53,20 @@ $icon-size: 1.8em;
 	vertical-align: text-bottom;
 }
 
+.ml-footer-divider {
+	display: none
+}
+
 @media screen and (min-width: 1280px) {
 	.ml-footer {
 		z-index: 10;
+	}
+}
+
+@media screen and (max-width: 749px) {
+	.ml-footer-divider {
+		display: block;
+		clear: both
 	}
 }
 
