@@ -1,5 +1,7 @@
 $bgcolour:	#F5F5F5;
 $base-colour:	black;
+$card-colour:	white;
 
-@import '2038/colour-relative';
+@import	'2038/syntax-light',
+	'2038/colour-relative';
 

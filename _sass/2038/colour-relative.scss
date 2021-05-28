@@ -1,17 +1,27 @@
+$curtain-colour: fade-out($bgcolour, .15);
+$indication-colour: fade-out($base-colour, .9);
+
+$normal-colour: fade-out($base-colour, .3);
+$levity-colour: fade-out($base-colour, .4);
+$heavy-colour: fade-out($base-colour, .1);
+$atlarge-colour: fade-out($base-colour, .8);
+
+$line-colour: $levity-colour;
+
 $link-change-time: .3s !default;
 
-h1, h2, h3, h4, h5, h6 {
-	color: fade-out($base-colour, .1);
+h1, h2, h3, h4, h5, h6, strong, .ml-footer-desc {
+	color: $heavy-colour;
 }
 
 body {	
 	background: $bgcolour;
-	color: fade-out($base-colour, .3);
+	color: $normal-colour;
 }
 
 @media screen and (max-width: 1300px) {
 	.ml-drawer[open] {
-		background: fade-out($bgcolour, .15);
+		background: $curtain-colour;
 	}
 }
 
@@ -21,27 +31,27 @@ body {
 }
 
 .ml-footer-copyright, .ml-footer-links li {
-	color: fade-out($base-colour, .4);
+	color: $levity-colour;
 }
 
-.ml-drawer a, .ml-social-list .svg-icon {
-	color: fade-out($base-colour, .4);
+.ml-drawer a, .ml-social-list .svg-icon, .ml-article a {
+	color: $levity-colour;
 
 	@media screen and (prefers-reduced-motion: no-preference) {
 		transition: color $link-change-time;
 	}
 
 	&:hover {
-		color: fade-out($base-colour, .1);
+		color: $heavy-colour;
 	}
 }
 
 .ml-drawer summary {
-	color: fade-out($base-colour, .3);
+	color: $normal-colour;
 }
 
 .ml-drawer summary:hover, .ml-bookmark a:hover {
-	background: fade-out($base-colour, .9);
+	background: $indication-colour;
 }
 
 .ml-toc-1 > a, .ml-toc-2 > a {
@@ -54,7 +64,67 @@ body {
 	}
 }
 
+.ml-article a {
+	color: $heavy-colour;
+	&:hover {
+		color: $normal-colour
+	}
+}
+
 .ml-footer-main {
-	background: fade-out($bgcolour, .3)
+	background: $curtain-colour;
+}
+
+blockquote {
+	border-left: .25em solid $atlarge-colour;
+}
+
+kbd {
+	border: 1px solid $line-colour;
+	border-radius: 5px
+}
+
+mark {
+	border: 1px dashed $heavy-colour;
+	background: none
+}
+
+ins, .ml-article a {
+	border-bottom: 1px solid $line-colour;
+}
+
+.ml-article a:hover {
+	border-bottom-color: $atlarge-colour;
+}
+
+u {
+	border-bottom: 1.2px dashed $line-colour;
+}
+
+em:after {
+	color: $line-colour;
+}
+
+figcaption {
+	color: $levity-colour;
+}
+
+strong, b, mark {
+	color: $heavy-colour;
+}
+
+body, .ml-drawer-inside {
+	&::-webkit-scrollbar-thumb {
+		background: $normal-colour;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: $heavy-colour;
+	}
+	&::-webkit-scrollbar-track-piece {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-track-piece:hover {
+		background: $atlarge-colour;
+	}
 }
 

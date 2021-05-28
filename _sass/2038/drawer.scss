@@ -2,16 +2,20 @@ $transition-time: .4s	!default;
 $mobile-width: 24em	!default;
 $mobile-opacity: .7	!default;
 
+.ml-drawer-inside {
+	padding: 3em 10px;
+	max-height: 75%;
+	overflow: auto;
+}
+
 .ml-drawer {
 	position: fixed;
 	left: 0;
 	top: 0;
-	padding: 3em 10px;
 	height: 3rem;
 
 	&[open] {
 		height: 100%;
-		overflow: auto;
 	}
 
 	&[open] .ml-menu-button {
@@ -27,6 +31,7 @@ $mobile-opacity: .7	!default;
 		text-align: center;	
 		line-height: 2rem;
 		font-size: 2rem;
+		speak: none;
 
 		&::marker {
 			content: '';

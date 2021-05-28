@@ -1,10 +1,13 @@
-body, .ml-info {
-	font: 400 12pt / 1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+//body, .ml-info {
+//	font: 400 12pt / 1.7 "Helvetica Neue", 'Noto Sans CJK SC', // 为调试临时加入
+//		Helvetica, Arial, sans-serif;
+//}
 
 body {
 	scroll-behavior: smooth;
 	min-height: 80%;
+	text-align: justify;
+	text-justify: inter-word 
 }
 
 .ml-article {
@@ -24,4 +27,44 @@ body {
 		display: none;
 	}
 }
+
+pre.highlight {
+	margin: 0;
+	padding: 1em;
+}
+
+blockquote {
+	margin: 0;
+	padding-left: .75em;
+}
+
+pre, code, samp, kbd {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+p {
+	margin: .5em 0;
+}
+
+summary {
+	cursor: pointer
+}
+
+.highlight, .highlight .w {
+	background: none
+}
+
+u {
+	text-decoration: none
+}
+
+body, .ml-drawer-inside {
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+	}
+}
+
 

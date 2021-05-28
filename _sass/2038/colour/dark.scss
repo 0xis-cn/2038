@@ -4,6 +4,8 @@
 
 $bgcolour: 	black;
 $base-colour:	white;
+$card-colour:	#1A1A1A;
 
-@import '2038/colour-relative';
+@import	'2038/syntax-dark',
+	'2038/colour-relative';
 

@@ -11,3 +11,9 @@ theme-2038:
                 instagram: mat__ling
                 telegram: cn_0xis
 
+highlighter: rouge
+markdown: kramdown
+kramdown:
+        input: GFM
+        syntax_highlighter: rouge
+
