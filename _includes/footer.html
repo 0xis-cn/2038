@@ -10,23 +10,24 @@
 			<img alt="{{ site.title }}" class="ml-wordmark" src="{{ t2038.wordmark }}" />
 		{%- endif -%}
 		<div class="ml-footer-divider"></div>
-		<ul class="ml-footer-links">
-			<li>吼吼</li>
-			<li>哈哈</li>
-			<li>呃呃</li>
-			<li>嘻嘻</li>
+		<ul class="ml-ul-dot-line">
+			{%- include link-item.html links=t2038.footer-links -%}
 		</ul>
+		<div class="ml-clear"></div>
 		{%- if t2038.footer-desc -%}
-			<p class="ml-footer-desc">{{ t2038.footer-desc }}</p>
+			<p class="ml-footer-desc">{%- include pick-language.html text=t2038.footer-desc -%}</p>
 		{%- endif -%}
 		{%- if t2038.from-year -%}
-			<p class="ml-footer-copyright">
-				{{ info.copyright }} {{ site.author }} {{ t2038.from-year }}—{{ 'now' | date: '%Y' }}
+			<p class="ml-smaller">
+			{%- assign now-year = 'now' | date: '%Y' -%}
+			{{ info.copyright }} {% include pick-language.html text=site.author.name -%}
+			{% if t2038.from-year != now-year -%}{{ t2038.from-year }}—{%- endif -%}{{ now-year }}
 			</p>
 		{%- endif -%}
 		{%- if t2038.license -%}
-			<p class="ml-footer-copyright">
-				{{ info.license | replace: 'LICENSE', t2038.license }}
+			<p class="ml-smaller">
+			{%- capture lname -%}{%- include pick-language.html text=t2038.license -%}{%- endcapture -%}
+				{{ info.license | replace: 'LICENSE', lname }}
 			</p>
 		{%- endif -%}
 	</aside>

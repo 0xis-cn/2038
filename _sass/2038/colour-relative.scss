@@ -4,7 +4,7 @@ $indication-colour: fade-out($base-colour, .9);
 $normal-colour: fade-out($base-colour, .3);
 $levity-colour: fade-out($base-colour, .4);
 $heavy-colour: fade-out($base-colour, .1);
-$atlarge-colour: fade-out($base-colour, .8);
+$atlarge-colour: fade-out($base-colour, .6);
 
 $line-colour: $levity-colour;
 
@@ -25,12 +25,17 @@ body {
 	}
 }
 
-.ml-footer-copyright {
+.footnotes ol {
+	padding-left: 2rem;
+	list-style: decimal;
+}
+
+.ml-smaller, .footnotes {
 	margin: 0;
 	font-size: .9em;
 }
 
-.ml-footer-copyright, .ml-footer-links li {
+.ml-footer .ml-smaller {
 	color: $levity-colour;
 }
 
@@ -64,7 +69,7 @@ body {
 	}
 }
 
-.ml-article a {
+.ml-article a, .ml-front a, .ml-footer a {
 	color: $heavy-colour;
 	&:hover {
 		color: $normal-colour
@@ -76,7 +81,7 @@ body {
 }
 
 blockquote {
-	border-left: .25em solid $atlarge-colour;
+	border-left: .25em solid $indication-colour;
 }
 
 kbd {
@@ -84,16 +89,20 @@ kbd {
 	border-radius: 5px
 }
 
+table tr, table td, table caption, pre {
+	border: 1px solid $atlarge-colour;
+}
+
 mark {
 	border: 1px dashed $heavy-colour;
 	background: none
 }
 
-ins, .ml-article a {
+ins, .ml-article a, .ml-front a, .ml-footer a {
 	border-bottom: 1px solid $line-colour;
 }
 
-.ml-article a:hover {
+.ml-article a:hover, .ml-front a, .ml-footer a {
 	border-bottom-color: $atlarge-colour;
 }
 
@@ -115,16 +124,76 @@ strong, b, mark {
 
 body, .ml-drawer-inside {
 	&::-webkit-scrollbar-thumb {
-		background: $normal-colour;
+		background: $atlarge-colour;
 	}
 	&::-webkit-scrollbar-thumb:hover {
-		background: $heavy-colour;
+		background: $levity-colour;
 	}
 	&::-webkit-scrollbar-track-piece {
 		background: transparent;
 	}
 	&::-webkit-scrollbar-track-piece:hover {
-		background: $atlarge-colour;
+		background: $indication-colour;
 	}
 }
+
+
+
+@mixin draw-bottom {
+	padding-bottom: .4em;
+	font-style: normal;
+	background-repeat: repeat-x;
+	background-size: 1em 1.4em;
+}
+
+em {
+	&:lang(*-Hans), &:lang(*-Hant) {
+		@include draw-bottom;
+		background-image: $em-image;
+	}
+
+	&:lang(cmn-Hans), &:lang(cmn-Hant),
+	&:lang(wuu-Hans), &:lang(wuu-Hant),
+	&:lang(czh-Hans), &:lang(czh-Hant),
+	&:lang(hak-Hans), &:lang(hak-Hant),
+	&:lang(yue-Hans), &:lang(yue-Hant),
+	&:lang(nan-Hans), &:lang(nan-Hant),
+	&:lang(cpx-Hans), &:lang(cpx-Hant),
+	&:lang(cdo-Hans), &:lang(cdo-Hant),
+	&:lang(mnp-Hans), &:lang(mnp-Hant),
+	&:lang(zco-Hans), &:lang(zco-Hant),
+	&:lang(gan-Hans), &:lang(gan-Hant),
+	&:lang(hsn-Hans), &:lang(hsn-Hant),
+	&:lang(cjy-Hans), &:lang(cjy-Hant),
+	&:lang(lzh-Hans), &:lang(lzh-Hant) {
+		@include draw-bottom;
+		background-image: $em-image;
+	}
+}
+
+cite {
+	&:lang(*-Hans), &:lang(*-Hant) {
+		@include draw-bottom;
+		background-image: $cite-image;
+	}
+
+	&:lang(cmn-Hans), &:lang(cmn-Hant),
+	&:lang(wuu-Hans), &:lang(wuu-Hant),
+	&:lang(czh-Hans), &:lang(czh-Hant),
+	&:lang(hak-Hans), &:lang(hak-Hant),
+	&:lang(yue-Hans), &:lang(yue-Hant),
+	&:lang(nan-Hans), &:lang(nan-Hant),
+	&:lang(cpx-Hans), &:lang(cpx-Hant),
+	&:lang(cdo-Hans), &:lang(cdo-Hant),
+	&:lang(mnp-Hans), &:lang(mnp-Hant),
+	&:lang(zco-Hans), &:lang(zco-Hant),
+	&:lang(gan-Hans), &:lang(gan-Hant),
+	&:lang(hsn-Hans), &:lang(hsn-Hant),
+	&:lang(cjy-Hans), &:lang(cjy-Hant),
+	&:lang(lzh-Hans), &:lang(lzh-Hant) {
+		@include draw-bottom;
+		background-image: $cite-image;
+	}
+}
+
 

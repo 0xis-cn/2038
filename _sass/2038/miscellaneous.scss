@@ -5,17 +5,45 @@
 
 body {
 	scroll-behavior: smooth;
-	min-height: 80%;
-	text-align: justify;
-	text-justify: inter-word 
+}
+
+
+body, button, input, select, textarea {
+	&:lang(*-Hans), &:lang(*-Hant) {
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+	&:lang(cmn-Hans), &:lang(cmn-Hant),
+	&:lang(wuu-Hans), &:lang(wuu-Hant),
+	&:lang(czh-Hans), &:lang(czh-Hant),
+	&:lang(hak-Hans), &:lang(hak-Hant),
+	&:lang(yue-Hans), &:lang(yue-Hant),
+	&:lang(nan-Hans), &:lang(nan-Hant),
+	&:lang(cpx-Hans), &:lang(cpx-Hant),
+	&:lang(cdo-Hans), &:lang(cdo-Hant),
+	&:lang(mnp-Hans), &:lang(mnp-Hant),
+	&:lang(zco-Hans), &:lang(zco-Hant),
+	&:lang(gan-Hans), &:lang(gan-Hant),
+	&:lang(hsn-Hans), &:lang(hsn-Hant),
+	&:lang(cjy-Hans), &:lang(cjy-Hant),
+	&:lang(lzh-Hans), &:lang(lzh-Hant) {
+		text-align: justify;
+		text-justify: inter-word;
+		font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+	}
 }
 
 .ml-article {
+	min-height: 30%;
 	position: relative;
 	top: 0;
 	left: 0;
 }
 
+.ml-title {
+	margin-bottom: 3px;
+}
 @media print {
 	body {
 		font: 400 12pt / 1.7 'Noto Serif CJK SC', serif,
@@ -35,6 +63,7 @@ pre.highlight {
 
 blockquote {
 	margin: 0;
+	margin-left: 1em;
 	padding-left: .75em;
 }
 
@@ -42,8 +71,12 @@ pre, code, samp, kbd {
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-p {
-	margin: .5em 0;
+kbd {
+	padding: 1px 3px 
+}
+
+p, table {
+	margin: 1em 0;
 }
 
 summary {
@@ -67,4 +100,35 @@ body, .ml-drawer-inside {
 	}
 }
 
+.ml-front a {
+	margin-left: .5em;
+}
+
+q {
+	&:lang(cmn-Hans), &:lang(cmn-Hant),
+	&:lang(wuu-Hans), &:lang(wuu-Hant),
+	&:lang(czh-Hans), &:lang(czh-Hant),
+	&:lang(hak-Hans), &:lang(hak-Hant),
+	&:lang(yue-Hans), &:lang(yue-Hant),
+	&:lang(nan-Hans), &:lang(nan-Hant),
+	&:lang(cpx-Hans), &:lang(cpx-Hant),
+	&:lang(cdo-Hans), &:lang(cdo-Hant),
+	&:lang(mnp-Hans), &:lang(mnp-Hant),
+	&:lang(zco-Hans), &:lang(zco-Hant),
+	&:lang(gan-Hans), &:lang(gan-Hant),
+	&:lang(hsn-Hans), &:lang(hsn-Hant),
+	&:lang(cjy-Hans), &:lang(cjy-Hant),
+	&:lang(lzh-Hans), &:lang(lzh-Hant) {
+		quotes: '\300C' '\300D' '\300E' '\300F'
+	}
+
+	&:lang(*-Hans), &:lang(*-Hant) {
+		quotes: '\300C' '\300D' '\300E' '\300F'
+	}
+}
+
+
+math * {
+	text-align: center
+}
 

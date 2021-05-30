@@ -3,7 +3,7 @@
 ---
 
 @import
-	'2038/typo',
 	'2038/colour/{{ site.theme-2038.skin | default: "auto" }}',
+	'2038/typo',
 	'2038/init';
 

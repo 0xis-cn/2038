@@ -22,16 +22,20 @@ $icon-size: 1.8em;
 	padding: 2em;
 }
 
-.ml-footer-links {
-	text-align: center;
+.ml-ul-dot-line {
+	.ml-footer & {
+		text-align: center;
+	}
 	line-height: 2rem;
 	padding: 0;
 
-	li {
+	.ml-footer & {
 		font-size: 1.05em;
+	}
+
+	li {
 		list-style: none;
 		display: inline-block;
-
 	}
 
 	li::before {
@@ -40,7 +44,7 @@ $icon-size: 1.8em;
 	}
 
 	li:first-child::before {
-		content: '';
+		display: none
 	}
 }
 
@@ -68,6 +72,10 @@ $icon-size: 1.8em;
 		display: block;
 		clear: both
 	}
+}
+
+.ml-clear {
+	clear: both
 }
 
 .ml-wordmark {

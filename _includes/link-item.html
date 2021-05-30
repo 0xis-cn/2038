@@ -1,0 +1,8 @@
+{%- for item in include.links -%}
+	<li>
+		<a href="{{ item.url }}">
+			{%- include pick-language.html text=item.name -%}
+		</a>
+	</li>
+{%- endfor -%}
+

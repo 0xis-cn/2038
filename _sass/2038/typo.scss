@@ -57,7 +57,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-  font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font: 300 1em/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
 button::-moz-focus-inner,
@@ -94,14 +94,14 @@ fieldset, img {
 //}
 
 /* Firefox 以外，元素没有下划线，需添加 */
-acronym, abbr {
+acronym, abbr, time {
   border-bottom: 1px dotted;
   font-variant: normal;
   text-decoration: none;
 }
 
 /* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
-abbr {
+abbr, time {
   cursor: help;
 }
 
@@ -110,7 +110,7 @@ del {
   text-decoration: line-through;
 }
 
-address, caption, cite, code, dfn, /*em,*/ th, var {
+address, caption, /*cite,*/ code, dfn, /*em,*/ th, var {
   font-style: normal;
   font-weight: 400;
 }
@@ -125,9 +125,9 @@ caption, th {
   text-align: left;
 }
 
-q:before, q:after {
-  content: '';
-}
+// q:before, q:after {
+//   content: '';
+// }
 
 /* 统一上标和下标 */
 sub, sup {
@@ -316,21 +316,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 同 ul/ol，在文章中应用 table 基本格式 */
-.typo table th, .typo table td, .typo-table th, .typo-table td, .typo table caption {
-  border: 1px solid #ddd;
+table th, table td, table caption {
+//  border: 1px solid #ddd;
   padding: 0.5em 1em;
 //  color: #666;
 }
 
-.typo table th, .typo-table th {
-//  background: #fbfbfb;
-}
-
-.typo table thead th, .typo-table thead th {
-//  background: #f1f1f1;
-}
-
-.typo table caption {
+table caption {
   border-bottom: none;
 }
 
@@ -346,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 着重号，只能在少量（少于100个字符）且全是全角字符的情况下使用 */
-@mixin dot-bottom {
+/*@mixin dot-bottom {
   position: relative;
   font-style: normal;
 
@@ -362,28 +354,7 @@ h1, h2, h3, h4, h5, h6 {
   speak: none;
 }
 }
-
-em:lang(*-Hans), em:lang(*-Hant) {
-	@include dot-bottom
-}
-
-
-em:lang(cmn-Hans), em:lang(cmn-Hant),
-em:lang(wuu-Hans), em:lang(wuu-Hant),
-em:lang(czh-Hans), em:lang(czh-Hant),
-em:lang(hak-Hans), em:lang(hak-Hant),
-em:lang(yue-Hans), em:lang(yue-Hant),
-em:lang(nan-Hans), em:lang(nan-Hant),
-em:lang(cpx-Hans), em:lang(cpx-Hant),
-em:lang(cdo-Hans), em:lang(cdo-Hant),
-em:lang(mnp-Hans), em:lang(mnp-Hant),
-em:lang(zco-Hans), em:lang(zco-Hant),
-em:lang(gan-Hans), em:lang(gan-Hant),
-em:lang(hsn-Hans), em:lang(hsn-Hant),
-em:lang(cjy-Hans), em:lang(cjy-Hant),
-em:lang(lzh-Hans), em:lang(lzh-Hant) {
-	@include dot-bottom
-}
+*/
 
 /* Responsive images */
 .typo img {

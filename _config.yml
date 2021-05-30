@@ -1,15 +1,32 @@
 title: Your Awesome Site
-author: 物灵
+author:
+        name: 物灵
+        email: mat-ling@139.com
+description:
 
 theme-2038:
         wordmark: /assets/wordmark.svg
         from-year: 2038
         license: 知识共享署名 4.0 国际
-        footer-desc: 铁可折，玉可碎，海可枯。不论穷达生死，直节贯殊途。（汪莘）
+        footer-desc: default-slogan
         social:
                 github: 0xis-cn 
                 instagram: mat__ling
                 telegram: cn_0xis
+        drawer-links:
+                -
+                        name: category
+                        url: /category
+                -
+                        name: tag
+                        url: /tag
+        footer-links:
+                -
+                        name: { cmn-Hans: 中文名, default: English name }
+                        url: https://www.example.com
+                -
+                        name: One name for all languages
+                        url: https://www.example.org
 
 highlighter: rouge
 markdown: kramdown

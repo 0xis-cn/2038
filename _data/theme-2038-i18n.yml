@@ -3,10 +3,24 @@ cmn-Hans:
         toc: 目录
         license: 除非另有声明，以上内容以LICENSE协议提供。
         copyright: 版权所有 ©
+        date-format: '%Y 年 %m 月 %e 日'
+        time-format: '%Y 年 %m 月 %e 日 %H:%M:%S'
+        published-at: 创建于 TIME
+        post-length: LENGTH 千字
+        tag: 标签
+        category: 类别
+        default-slogan: 冲动与你同在。
 
 en:
         main-page: Main page
         toc: Table of Content
         license: The content is available under LICENSE license unless otherwise specified.
         copyright: Copyright ©
+        date-format: '%b %e, %Y'
+        time-format: '%b %e, %Y %H:%M:%S'
+        published-at: Created in TIME
+        post-length: LENGTHk characters
+        tag: Tags
+        category: Categories
+        default-slogan: May the Impulse be with you.
 

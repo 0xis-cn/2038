@@ -1,11 +1,19 @@
 {%- assign lang = page.lang | default: site.lang | default: 'cmn-Hans' -%}
 {%- assign info-array = site.data.theme-2038-i18n | map: lang -%}
 {%- assign info = info-array[0] -%}
+{%- assign t2038 = site.theme-2038 -%}
 
 <details class="ml-drawer">
 	<summary class="ml-menu-button">≡</summary>
 	<div class="ml-drawer-inside">
-		{% include bookmark.html %}
+		<ul class="ml-bookmark">
+			<li>
+				<a href="{{ '/' | relative_url }}">
+					{{ info.main-page }}
+				</a>
+			</li>
+			{%- include link-item.html links=t2038.drawer-links -%}
+		</ul>
 		<details open>
 			<summary>{{ info.toc }}</summary>
 			{% include toc.html html=content class='ml-toc'
