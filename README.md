@@ -21,7 +21,7 @@
 
 * JavaScript-free
 * Light/Dark colour theme
-* Internationalisation
+* Full support of i18n
 
 ## Installation
 

@@ -7,11 +7,17 @@ body {
 	scroll-behavior: smooth;
 }
 
+@-moz-document url-prefix() {
+	body {
+		text-align: justify;
+		text-justify: inter-word;
+	}
+}
+
 
 body, button, input, select, textarea {
 	&:lang(*-Hans), &:lang(*-Hant) {
-		text-align: justify;
-		text-justify: inter-word;
+		font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 	}
 
 	&:lang(cmn-Hans), &:lang(cmn-Hant),
@@ -28,8 +34,6 @@ body, button, input, select, textarea {
 	&:lang(hsn-Hans), &:lang(hsn-Hant),
 	&:lang(cjy-Hans), &:lang(cjy-Hant),
 	&:lang(lzh-Hans), &:lang(lzh-Hant) {
-		text-align: justify;
-		text-justify: inter-word;
 		font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 	}
 }
@@ -76,7 +80,7 @@ kbd {
 }
 
 p, table {
-	margin: 1em 0;
+	margin: .9em 0;
 }
 
 summary {
