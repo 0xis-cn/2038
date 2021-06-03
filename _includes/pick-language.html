@@ -2,5 +2,5 @@
 {%- assign info = site.data.theme-2038-i18n | map: lang | first -%}
 {%- assign speech = include.text -%}
 {%- assign preset = info | map: speech | first -%}
-{{ speech | map: lang | first | default: preset | default: speech.default | default: speech }}
+{{- speech | map: lang | first | default: preset | default: speech.default | default: speech -}}
 

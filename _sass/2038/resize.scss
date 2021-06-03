@@ -2,7 +2,8 @@ $header-height: 9em !default;
 $middle-width: 960px !default;
 
 .ml-main {
-	margin: $header-height auto 4em;	
+	margin: 0 auto;	
+	padding: $header-height 0 4em;
 	max-width: $middle-width
 }
 
@@ -21,7 +22,8 @@ $middle-width: 960px !default;
 
 @media (max-width: 960px) {
 	.ml-main {
-		margin: $header-height 1em 4em;
+		margin: 0 1em;
+		padding: $header-height 0 4em;
 	}
 }
 

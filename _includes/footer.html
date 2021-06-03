@@ -20,7 +20,7 @@
 		{%- if t2038.from-year -%}
 			<p class="ml-smaller">
 			{%- assign now-year = 'now' | date: '%Y' -%}
-			{{ info.copyright }} {% include pick-language.html text=site.author.name -%}
+			{{ info.copyright }} {% include pick-language.html text=site.author.name %}
 			{% if t2038.from-year != now-year -%}{{ t2038.from-year }}—{%- endif -%}{{ now-year }}
 			</p>
 		{%- endif -%}

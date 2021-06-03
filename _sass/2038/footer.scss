@@ -1,4 +1,8 @@
 .ml-footer {
+	.ml-wordmark {
+		float: left;
+	}
+
 	position: relative;
 	bottom: 0;
 	width: 100%;
@@ -28,10 +32,6 @@ $icon-size: 1.8em;
 	}
 	line-height: 2rem;
 	padding: 0;
-
-	.ml-footer & {
-		font-size: 1.05em;
-	}
 
 	li {
 		list-style: none;
@@ -76,9 +76,5 @@ $icon-size: 1.8em;
 
 .ml-clear {
 	clear: both
-}
-
-.ml-wordmark {
-	float: left;
 }
 

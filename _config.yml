@@ -3,11 +3,12 @@ author:
         name: 物灵
         email: mat-ling@139.com
 description:
+lang: cmn-Hans
 
 theme-2038:
         wordmark: /assets/wordmark.svg
         from-year: 2038
-        license: 知识共享署名 4.0 国际
+        license: 'Some license'
         footer-desc: default-slogan
         social:
                 github: 0xis-cn 
