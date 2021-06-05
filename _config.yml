@@ -8,26 +8,26 @@ lang: cmn-Hans
 theme-2038:
         wordmark: /assets/wordmark.svg
         from-year: 2038
-        license: 'Some license'
         footer-desc: default-slogan
+#        license: Some license
         social:
-                github: 0xis-cn 
-                instagram: mat__ling
-                telegram: cn_0xis
+#               github: 0xis-cn 
+#               instagram: mat__ling
+#               telegram: cn_0xis
         drawer-links:
-                -
-                        name: category
-                        url: /category
-                -
-                        name: tag
-                        url: /tag
+#                -
+#                       name: category
+#                       url: /category
+#               -
+#                       name: tag
+#                       url: /tag
         footer-links:
-                -
-                        name: { cmn-Hans: 中文名, default: English name }
-                        url: https://www.example.com
-                -
-                        name: One name for all languages
-                        url: https://www.example.org
+#               -
+#                       name: { cmn-Hans: 中文名, default: English name }
+#                       url: https://www.example.com
+#               -
+#                       name: One name for all languages
+#                       url: https://www.example.org
 
 highlighter: rouge
 markdown: kramdown

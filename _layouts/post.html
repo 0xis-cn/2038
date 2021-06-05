@@ -7,60 +7,58 @@ layout: default
 {%- assign info = info-array[0] -%}
 {%- assign t2038 = site.theme-2038 -%}
 
-<main class="ml-main">
-	{% include drawer.html %}
-	{% if page.title %}
-		<h1 class="ml-title">{{ page.title }}</h1>
-	{% endif %}
-	<ul class="ml-smaller ml-ul-dot-line ml-front">
-		<li>
-			{%- assign time = page.date | default: 'now' -%}
-			<time datetime="{{ time }}" title="{{ time | date: info.time-format }}">
-				{%- assign time-manifest = time | date: info.date-format -%}
-				{{ info.published-at | replace: 'TIME', time-manifest }}
-			</time>
-		</li>
-		<li>
-			{%- assign length = content.size | divided_by: 1000.0 | round: 1 -%}
-			{{ info.post-length | replace: 'LENGTH', length }}
-		</li>
-		{%- assign clink = t2038.category-links -%}
-		{%- if page.categories.size != 0 -%}
-		<li>
-			{{ info.category }}
-			{%- for category in page.categories -%}
-			{%- assign cescape = category | uri_escape -%}
-			{%- assign now-array = clink | map: category -%}
-			{%- if now-array.size == 0 -%}
-			<a rel="index" href="
-				{{ t2038.category-dir | default: '/category/' | append: cescape | relative_path }}
-				">{{ category }}</a>
-			{%- else -%}
-			<a rel="index" href="{{ now-array[0] }}">{{ category }}</a>
-			{%- endif -%}
-			{%- endfor -%}
-		</li>
+{% include drawer.html %}
+{% if page.title %}
+	<h1 class="ml-title">{{ page.title }}</h1>
+{% endif %}
+<ul class="ml-smaller ml-ul-dot-line ml-front">
+	<li>
+		{%- assign time = page.date | default: 'now' -%}
+		<time datetime="{{ time }}" title="{{ time | date: info.time-format }}" pubdate>
+			{%- assign time-manifest = time | date: info.date-format -%}
+			{{ info.published-at | replace: 'TIME', time-manifest }}
+		</time>
+	</li>
+	<li>
+		{%- assign length = content.size | divided_by: 1000.0 | round: 1 -%}
+		{{ info.post-length | replace: 'LENGTH', length }}
+	</li>
+	{%- assign clink = t2038.category-links -%}
+	{%- if page.categories.size != 0 -%}
+	<li>
+		{{ info.category }}
+		{%- for category in page.categories -%}
+		{%- assign cescape = category | uri_escape -%}
+		{%- assign now-array = clink | map: category -%}
+		{%- if now-array.size == 0 -%}
+		<a rel="index" href="
+			{{ t2038.category-dir | default: '/category/' | append: cescape | relative_path }}
+			">{{ category }}</a>
+		{%- else -%}
+		<a rel="index" href="{{ now-array[0] }}">{{ category }}</a>
 		{%- endif -%}
-		{%- assign tlink = t2038.tag-links -%}
-		{%- if page.tags.size != 0 -%}
-		<li>
-			{{ info.tag }}
-			{%- for tag in page.tags -%}
-			{%- assign tescape = tag | uri_escape -%}
-			{%- assign now-array = tlink | map: tag -%}
-			{%- if now-array.size == 0 -%}
-			<a rel="index" href="
-				{{ t2038.tag-dir | default: '/tag/' | append: tescape | relative_path }}
-				">{{ tag }}</a>
-			{%- else -%}
-			<a rel="index" href="{{ now-array[0] }}">{{ tag }}</a>
-			{%- endif -%}
-			{%- endfor -%}
-		</li>
+		{%- endfor -%}
+	</li>
+	{%- endif -%}
+	{%- assign tlink = t2038.tag-links -%}
+	{%- if page.tags.size != 0 -%}
+	<li>
+		{{ info.tag }}
+		{%- for tag in page.tags -%}
+		{%- assign tescape = tag | uri_escape -%}
+		{%- assign now-array = tlink | map: tag -%}
+		{%- if now-array.size == 0 -%}
+		<a rel="index" href="
+			{{ t2038.tag-dir | default: '/tag/' | append: tescape | relative_path }}
+			">{{ tag }}</a>
+		{%- else -%}
+		<a rel="index" href="{{ now-array[0] }}">{{ tag }}</a>
 		{%- endif -%}
-	</ul>
-	<article class="ml-article">
-		{{ content }}
-	</article>
-</main>
+		{%- endfor -%}
+	</li>
+	{%- endif -%}
+</ul>
+<article class="ml-article">
+	{{ content }}
+</article>
 

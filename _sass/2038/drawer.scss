@@ -87,8 +87,8 @@ $mobile-opacity: .7	!default;
 }
 
 
-.ml-toc ul {
-	margin: 0;
+.ml-toc li {
+	margin: .8em 0;
 	line-height: 1.1em
 }
 
@@ -99,10 +99,6 @@ $mobile-opacity: .7	!default;
 
 .ml-toc, .ml-toc-sub  {
 	padding-left: 1em;
-}
-
-.ml-toc-sub > li {
-	margin: .8em 0
 }
 
 .ml-toc-1 > .ml-toc-sub, .ml-toc-2 > .ml-toc-sub {

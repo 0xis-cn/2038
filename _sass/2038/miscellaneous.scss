@@ -14,6 +14,27 @@ body {
 	}
 }
 
+.ml-article ul, .ml-article ol {
+	padding-inline-start: 3em;
+}
+
+.ml-pinyin {
+	line-height: 2.2em;
+}
+
+.ml-ipa {
+	font-family: CharisSILW, serif, serif;
+}
+
+.ruby-wrapper {
+	margin: 0 .2em;
+}
+
+rt {
+	font-size: 82.5%;
+	line-height: 1.5;
+	speak: none
+}
 
 body, button, input, select, textarea {
 	&:lang(*-Hans), &:lang(*-Hant) {
@@ -48,6 +69,7 @@ body, button, input, select, textarea {
 .ml-title {
 	margin-bottom: 3px;
 }
+
 @media print {
 	body {
 		font: 400 12pt / 1.7 'Noto Serif CJK SC', serif,
