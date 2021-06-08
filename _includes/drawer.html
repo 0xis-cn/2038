@@ -16,8 +16,10 @@
 		</ul>
 		<details open>
 			<summary>{{ info.toc }}</summary>
-			{% include toc.html html=content class='ml-toc'
+			{%- unless page.no-toc -%}
+				{% include toc.html html=content class='ml-toc'
 				submenu_class='ml-toc-sub' item_class='ml-toc-%level%' %}
+			{%- endunless -%}
 		</details>
 	</div>
 </details>

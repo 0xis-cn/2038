@@ -1,0 +1,38 @@
+{%- assign last = 'first' -%}
+{%- assign posts = site.posts | reverse -%}
+{%- for cur in posts -%}
+{%- assign trigger = cur.date | date: include.first -%}
+{%- if trigger == include.range and cur.hidden != true -%}
+{%- assign now = cur.date | date: include.second -%}
+{%- if now != last -%}
+{%- if last == 'first' -%}
+<dl class="ml-card-list">
+{%- else -%}
+		</ul>
+	</dd>
+{%- endif -%}
+{%- assign last = now -%}
+	<dt>{{ last }}</dt>
+	<dd>
+		<ul>
+{%- endif -%}
+			<li>
+				<a href="{{ cur.url | relative_url }}">
+					{%- if cur.image -%}
+					<img src="{{ cur.image | relative_url }}" />
+					{%- endif -%}
+					<div class="ml-card-text">
+						<h2>{{ cur.title }}</h2>
+						{%- if site.show_excerpts -%}
+						{{ post.excerpt }}
+						{%- endif -%}
+					</div>
+				</a>
+			</li>
+{%- endif -%}
+{%- endfor -%}
+		</ul>
+	</dd>
+</dl>
+
+

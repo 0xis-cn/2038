@@ -9,6 +9,7 @@ cmn-Hans:
         post-length: LENGTH 千字
         tag: 标签
         category: 类别
+        rss-subscribe: RSS 订阅
         default-slogan: 冲动与你同在。
 
 en:
@@ -22,5 +23,6 @@ en:
         post-length: LENGTHk characters
         tag: Tags
         category: Categories
+        rss-subscribe: RSS Subscription
         default-slogan: May the Impulse be with you.
 

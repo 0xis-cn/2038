@@ -1,5 +1,6 @@
 $header-height: 9em !default;
 $middle-width: 960px !default;
+$link-change-time: .3s !default;
 
 .ml-main {
 	margin: 0 auto;	
@@ -11,6 +12,74 @@ $middle-width: 960px !default;
 	padding-right: ($middle-width / 2) + 10px
 }
 
+.ml-card-list dt::before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 2em;
+}
+
+.ml-card-list li {
+	list-style: none;
+	margin: 8px 4px;
+	display: inline-block;
+}
+
+.ml-card-list dd {
+	padding-bottom: 1em;
+}
+
+.ml-card-list dt {
+	position: relative;
+	left: -30px;
+}
+
+.ml-card-list {
+	margin-left: 6px;
+	padding-left: 20px;
+	line-height: 1.2rem;
+}
+
+.ml-card-list h2 {
+	margin: 5px 0;
+}
+
+.ml-card-list a {
+	width: (($middle-width - 90px) / 3);
+	height: 8rem;
+	display: inline-block;
+	position: relative;
+	border: none;
+	overflow: hidden;
+}
+
+.ml-card-list a .ml-card-text {
+	position: absolute;
+	bottom: 0;
+	padding: 10px;
+	padding-top: 14px;
+	@media screen and (prefers-reduced-motion: no-preference) {
+		padding-top: 4px;
+		transition: all $link-change-time;
+	}
+}
+
+.ml-card-list a img {
+	opacity: 0.2;
+	@media screen and (prefers-reduced-motion: no-preference) {
+		transition: all $link-change-time;
+	}
+}
+
+.ml-card-list a:hover img {
+	opacity: 0.1;
+}
+
+.ml-card-list a:hover .ml-card-text {
+	bottom: 10px;
+}
+
 @media (min-width: 1600px) {
 	.ml-main {
 		max-width: 60%;
@@ -18,12 +87,31 @@ $middle-width: 960px !default;
 	.ml-drawer {
 		padding-right: -32%
 	}
+	.ml-card-list a {
+		width: 20rem;
+	}
 }
+
 
 @media (max-width: 960px) {
 	.ml-main {
 		margin: 0 1em;
 		padding: $header-height 0 4em;
+	}
+	.ml-card-list a {
+		width: 25vw;
+	}
+}
+
+@media (max-width: 768px) {
+	.ml-card-list a {
+		width: 40vw;
+	}
+}
+
+@media (max-width: 540px) {
+	.ml-card-list a {
+		width: 80vw;
 	}
 }
 

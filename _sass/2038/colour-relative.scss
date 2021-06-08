@@ -196,4 +196,26 @@ cite {
 	}
 }
 
+.ml-card-list a {
+	background: $card-colour;
+	color: $levity-colour;
 
+	h2 {
+		color: $normal-colour;
+	}
+
+	&:hover {
+		background-color: fade-out($indication-colour, 0.05);
+		color: $heavy-colour
+	}
+}
+
+.ml-card-list {
+	border-left: 2px solid $normal-colour;
+}
+
+.ml-card-list dt::before {
+	border: 2px solid $normal-colour;
+	background: $bgcolour;
+	border-radius: 1em;
+}
