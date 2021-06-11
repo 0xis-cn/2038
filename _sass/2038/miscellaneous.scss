@@ -1,8 +1,3 @@
-//body, .ml-info {
-//	font: 400 12pt / 1.7 "Helvetica Neue", 'Noto Sans CJK SC', // 为调试临时加入
-//		Helvetica, Arial, sans-serif;
-//}
-
 body {
 	scroll-behavior: smooth;
 }
@@ -17,6 +12,7 @@ body {
 .ml-article ul, .ml-article ol {
 	padding-inline-start: 3em;
 }
+
 
 .ml-pinyin {
 	line-height: 2.2em;
@@ -36,26 +32,30 @@ rt {
 	speak: none
 }
 
-body, button, input, select, textarea {
-	&:lang(*-Hans), &:lang(*-Hant) {
+body, button, input, select, textarea, .temp-lang {
+	&:lang(*-Hans) {
 		font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 	}
 
-	&:lang(cmn-Hans), &:lang(cmn-Hant),
-	&:lang(wuu-Hans), &:lang(wuu-Hant),
-	&:lang(czh-Hans), &:lang(czh-Hant),
-	&:lang(hak-Hans), &:lang(hak-Hant),
-	&:lang(yue-Hans), &:lang(yue-Hant),
-	&:lang(nan-Hans), &:lang(nan-Hant),
-	&:lang(cpx-Hans), &:lang(cpx-Hant),
-	&:lang(cdo-Hans), &:lang(cdo-Hant),
-	&:lang(mnp-Hans), &:lang(mnp-Hant),
-	&:lang(zco-Hans), &:lang(zco-Hant),
-	&:lang(gan-Hans), &:lang(gan-Hant),
-	&:lang(hsn-Hans), &:lang(hsn-Hant),
-	&:lang(cjy-Hans), &:lang(cjy-Hant),
-	&:lang(lzh-Hans), &:lang(lzh-Hant) {
+	&:lang(cmn-Hans),
+	&:lang(wuu-Hans),
+	&:lang(czh-Hans),
+	&:lang(hak-Hans),
+	&:lang(yue-Hans),
+	&:lang(nan-Hans),
+	&:lang(cpx-Hans),
+	&:lang(cdo-Hans),
+	&:lang(mnp-Hans),
+	&:lang(zco-Hans),
+	&:lang(gan-Hans),
+	&:lang(hsn-Hans),
+	&:lang(cjy-Hans),
+	&:lang(lzh-Hans) {
 		font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+	}
+
+	&:lang(jp) {
+		font: 300 1em/1.8;
 	}
 }
 
@@ -156,5 +156,39 @@ q {
 
 math * {
 	text-align: center
+}
+
+.ml-card-list ul {
+	padding: 0;
+}
+
+
+a.ml-card-anchor, a.ml-block-anchor {
+	border: none;
+	display: block;
+}
+
+.ml-block-anchor {
+	padding: 4px
+}
+
+.ml-page-list {
+	text-align: center;
+	
+	li {
+		display: inline-block;
+		list-style: none;
+	}
+	
+	a, .ml-placeholder {
+		display: block;
+		width: 2.5em;
+		line-height: 2em;
+		border-bottom: none;
+	}
+}
+
+ul.ml-page-list {
+	padding: 0;
 }
 

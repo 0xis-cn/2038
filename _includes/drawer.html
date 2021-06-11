@@ -14,13 +14,13 @@
 			</li>
 			{%- include link-item.html links=t2038.drawer-links -%}
 		</ul>
+		{%- unless page.no-toc -%}
 		<details open>
 			<summary>{{ info.toc }}</summary>
-			{%- unless page.no-toc -%}
 				{% include toc.html html=content class='ml-toc'
 				submenu_class='ml-toc-sub' item_class='ml-toc-%level%' %}
-			{%- endunless -%}
 		</details>
+		{%- endunless -%}
 	</div>
 </details>
 

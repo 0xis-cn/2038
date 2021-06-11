@@ -1,5 +1,5 @@
 {%- assign last = 'first' -%}
-{%- assign posts = site.posts | reverse -%}
+{%- assign posts = include.posts | reverse -%}
 {%- for cur in posts -%}
 {%- assign trigger = cur.date | date: include.first -%}
 {%- if trigger == include.range and cur.hidden != true -%}
@@ -17,14 +17,14 @@
 		<ul>
 {%- endif -%}
 			<li>
-				<a href="{{ cur.url | relative_url }}">
+				<a href="{{ cur.url | relative_url }}" class="ml-card-anchor">
 					{%- if cur.image -%}
 					<img src="{{ cur.image | relative_url }}" />
 					{%- endif -%}
 					<div class="ml-card-text">
 						<h2>{{ cur.title }}</h2>
 						{%- if site.show_excerpts -%}
-						{{ post.excerpt }}
+						{{ cur.excerpt }}
 						{%- endif -%}
 					</div>
 				</a>

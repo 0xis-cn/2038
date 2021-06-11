@@ -20,6 +20,10 @@ $link-change-time: .3s !default;
 	margin-right: 2em;
 }
 
+.ml-block-list li {
+	list-style: none;
+}
+
 .ml-card-list li {
 	list-style: none;
 	margin: 8px 4px;
@@ -45,16 +49,16 @@ $link-change-time: .3s !default;
 	margin: 5px 0;
 }
 
-.ml-card-list a {
-	width: (($middle-width - 90px) / 3);
-	height: 8rem;
+.ml-card-anchor {
+	width: (($middle-width - 150px) / 2);
+	height: 10rem;
 	display: inline-block;
 	position: relative;
 	border: none;
 	overflow: hidden;
 }
 
-.ml-card-list a .ml-card-text {
+.ml-card-anchor .ml-card-text {
 	position: absolute;
 	bottom: 0;
 	padding: 10px;
@@ -65,18 +69,21 @@ $link-change-time: .3s !default;
 	}
 }
 
-.ml-card-list a img {
+.ml-card-anchor img {
 	opacity: 0.2;
+	position: absolute;
+	left: 0;
+	top: 0;
 	@media screen and (prefers-reduced-motion: no-preference) {
 		transition: all $link-change-time;
 	}
 }
 
-.ml-card-list a:hover img {
+.ml-card-anchor:hover img {
 	opacity: 0.1;
 }
 
-.ml-card-list a:hover .ml-card-text {
+.ml-card-anchor:hover .ml-card-text {
 	bottom: 10px;
 }
 
@@ -87,31 +94,32 @@ $link-change-time: .3s !default;
 	.ml-drawer {
 		padding-right: -32%
 	}
-	.ml-card-list a {
-		width: 20rem;
+	.ml-card-anchor {
+		width: 30rem;
 	}
 }
 
 
-@media (max-width: 960px) {
+@media (max-width: 959px) {
 	.ml-main {
 		margin: 0 1em;
 		padding: $header-height 0 4em;
 	}
-	.ml-card-list a {
-		width: 25vw;
-	}
-}
-
-@media (max-width: 768px) {
-	.ml-card-list a {
+	.ml-card-anchor {
 		width: 40vw;
 	}
 }
 
-@media (max-width: 540px) {
-	.ml-card-list a {
+@media (max-width: 767px) {
+	.ml-card-anchor {
 		width: 80vw;
+		height: 9rem;
+	}
+}
+
+@media (max-width: 539px) {
+	.ml-card-anchor {
+		height: 12rem;
 	}
 }
 

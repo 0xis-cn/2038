@@ -55,7 +55,7 @@ body {
 	color: $normal-colour;
 }
 
-.ml-drawer summary:hover, .ml-bookmark a:hover {
+.ml-drawer summary:hover, .ml-bookmark a:hover, .ml-block-anchor:hover, .ml-page-list a:hover {
 	background: $indication-colour;
 }
 
@@ -196,7 +196,7 @@ cite {
 	}
 }
 
-.ml-card-list a {
+.ml-card-anchor {
 	background: $card-colour;
 	color: $levity-colour;
 

@@ -5,6 +5,9 @@ author:
 description:
 lang: cmn-Hans
 
+# Show excerpts in timelines and lists.
+# show_excerpts: true 
+
 theme-2038:
         wordmark: /assets/wordmark.svg
         from-year: 2038

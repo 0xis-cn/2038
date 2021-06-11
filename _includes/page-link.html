@@ -1,0 +1,19 @@
+<ul class="ml-page-list">
+{%- assign title = include.title | default: 'NUM' -%}
+{% for i in (include.from .. include.to) %}
+	<li>
+		{% if i == include.current %}
+		<span class="ml-placeholder">{{ i }}</span>
+		{%- elsif include.first-url and i == 1 -%}
+			<a href="{{ include.first-url }}" title="{{ include.first-title | default: '1' }}">
+				{{ i }}
+			</a>
+		{% else %}
+			<a href="{{ include.url }}" title="{{ title | replace: 'NUM', i }}">
+				{{ i }}
+			</a>
+		{% endif %}
+	</li>
+{% endfor %}
+</ul>
+

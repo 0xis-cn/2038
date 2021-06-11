@@ -9,10 +9,15 @@ categories:
 tags:
         - A Tag
         - Another Tag
+no-toc: true
 ---
 
 <p>I cannot find something more interesting. So, lorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut labore et dolore magna aliqua veniam, quis nostrud exercitation ullamcorpor s commodo consequat. Duis autem vel eum irrure esse molestiae consequat, vel illum dolore eu fugi et iusto odio dignissim qui blandit praesent luptat exceptur sint occaecat cupiditat non provident, deserunt mollit anim id est laborum et dolor fuga distinct. Nam liber tempor cum soluta nobis elige quod maxim placeat facer possim omnis volupt</p>
 <p>The timeline will be rendered as:</p>
 
-{%- include time-line.html first="%Y" second="%B" range="2021" -%}
+{%- include time-line.html posts=site.posts first="%Y" second="%B" range="2021" -%}
+{%- include plain-list.html posts=site.posts -%}
+
+{%- include page-link.html from=1234 to=1240 title="NUM sheep" current=1238
+	url="https://www.numberempire.com/NUM" -%}
 

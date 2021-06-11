@@ -1,0 +1,17 @@
+{%- assign posts = include.posts | reverse -%}
+<ul class="ml-block-list">
+{%- for cur in posts -%}
+{%- if cur.hidden != true -%}
+	<li>
+		<a href="{{ cur.url | relative_url }}" class="ml-block-anchor">
+			<h2>{{ cur.title }}</h2>
+			{%- if site.show_excerpts -%}
+			{{ cur.excerpt }}
+			{%- endif -%}
+			测试文字
+		</a>
+	</li>
+{%- endif -%}
+{%- endfor -%}
+</ul>
+

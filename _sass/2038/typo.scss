@@ -56,7 +56,7 @@ audio, canvas, video {
 }
 
 /* 要注意表单元素并不继承父级 font 的问题 */
-body, button, input, select, textarea {
+body, button, input, select, textarea, .reset-lang {
   font: 300 1em/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Cambria Math', 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 

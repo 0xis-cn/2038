@@ -3,6 +3,7 @@ layout: post
 permalink: /lorem-ipsum
 lang: en 
 title: Lorem Ipsum
+image: /assets/screenshot.jpg
 categories:
         - A Category
         - Another Category
