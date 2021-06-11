@@ -11,8 +11,6 @@
 
 2038 is a minimalist Jekyll theme.
 
-《2038》是一种极简 Jekyll 主题。
-
 ## Screenshots
 
 ![Light and English Screenshot](assets/screenshot-light.jpg)
@@ -47,4 +45,9 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jekyll-theme-2038
+
+## Todo
+
+* Support of UnicodeMath or ASCIIMath
+* Right-to-left and vertical page
 
