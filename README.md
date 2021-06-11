@@ -28,5 +28,23 @@
 
 ## Installation
 
-(Under construction. To be continued…)
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "jekyll-theme2038"
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: jekyll-theme-2038
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install jekyll-theme-2038
 
