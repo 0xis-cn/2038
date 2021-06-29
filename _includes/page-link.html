@@ -9,7 +9,7 @@
 				{{ i }}
 			</a>
 		{% else %}
-			<a href="{{ include.url }}" title="{{ title | replace: 'NUM', i }}">
+			<a href="{{ include.url | replace: 'NUM', i }}" title="{{ title | replace: 'NUM', i }}">
 				{{ i }}
 			</a>
 		{% endif %}

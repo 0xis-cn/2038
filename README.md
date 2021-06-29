@@ -4,6 +4,8 @@
 
 ![Version 0.1.0 with Gem](https://img.shields.io/badge/gem-0.1.0-519dd9.svg)
 
+[TOC]
+
 > Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So, throw off the bowlines. Sail away from the safe harbour. Catch the trade winds in your sails. Explore. Dream. Discover.  
 > 20 年后，比起已做之事，你将更因未做之事绝望。所以，抛掉缰绳，驶离避风港，乘信风远航吧。去探索，去梦想，去发现。
 >
@@ -45,6 +47,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jekyll-theme-2038
+
+BUT WAIT! You have to put [translation file](https://github.com/0xis-cn/2038/blob/main/_data/theme-2038-i18n.yml) manually into `_data` directory of your site to correctly display information, for it cannot be included in the gem.
+
+## Usage
+
+
 
 ## Todo
 
