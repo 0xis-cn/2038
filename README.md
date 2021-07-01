@@ -65,5 +65,5 @@ included in the gem.
 * Support of UnicodeMath or ASCIIMath
 * Right-to-left and vertical page
 
-[i18n]: https://github.com/0xis-cn/2038/blob/main/_data/theme-2038-i18n.yml
+[i18n-pos]: https://github.com/0xis-cn/2038/blob/main/_data/theme-2038-i18n.yml
 
