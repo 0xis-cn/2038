@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-2038"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["物灵"]
   spec.email         = ["mat-ling@139.com"]
 
-  spec.summary       = "2038 is a minimalist Jekyll Theme for Writers."
+  spec.summary       = "2038 is a minimalist Jekyll Theme for writers."
   spec.homepage      = "https://github.com/0xis-cn/2038"
   spec.license       = "MIT"
 
