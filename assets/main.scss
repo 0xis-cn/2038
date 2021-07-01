@@ -1,6 +1,8 @@
 ---
-
 ---
+
+$cite-image:		url(underline-light.svg);
+$em-image:		url(dot-light.svg);
 
 @import
 	'2038/colour/{{ site.theme-2038.skin | default: "auto" }}',

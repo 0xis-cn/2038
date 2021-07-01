@@ -1,9 +1,12 @@
-$bgcolour:	#F5F5F5;
-$base-colour:	black;
-$card-colour:	white;
-
-$cite-image:	url(underline-light.svg);
-$em-image:	url(dot-light.svg);
+$bgcolour:			#F6F5F0;
+$base-colour:			black;
+$card-colour:			white;
+$indication-colour:		#D8D8D8;
+$normal-colour:			#555;
+$levity-colour:			#777;
+$heavy-colour:			#1A1A1A;
+$atlarge-colour:		#999;
+$meso-colour:			#333;
 
 @import	'2038/syntax-light',
 	'2038/colour-relative';

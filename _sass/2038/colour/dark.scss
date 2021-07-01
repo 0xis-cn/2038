@@ -5,9 +5,15 @@
 $cite-image:	url(underline-dark.svg);
 $em-image:	url(dot-dark.svg);
 
-$bgcolour: 	black;
-$base-colour:	white;
-$card-colour:	#1A1A1A;
+$bgcolour:			black;
+$base-colour:			white;
+$card-colour:			#1A1A1A;
+$indication-colour:		#333;
+$normal-colour:			#AAA;
+$levity-colour:			#999;
+$heavy-colour:			#E6E6DC;
+$atlarge-colour:		#666;
+$meso-colour:			#CCC;
 
 @import	'2038/syntax-dark',
 	'2038/colour-relative';
