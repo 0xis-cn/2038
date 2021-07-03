@@ -1,15 +1,12 @@
 $header-height: 9em !default;
-$middle-width: 960px !default;
 $link-change-time: .3s !default;
+$middle-width: 960px !default;
+// TIPS: 若调整 $middle-width 请同步修改 drawer.scss 中 .ml-drawer 之宽度 
 
 .ml-main {
 	margin: 0 auto;	
 	padding: $header-height 0 4em;
 	max-width: $middle-width
-}
-
-.ml-drawer {
-	padding-right: ($middle-width / 2) + 10px
 }
 
 .ml-card-list dt::before {
@@ -90,9 +87,6 @@ $link-change-time: .3s !default;
 @media (min-width: 1600px) {
 	.ml-main {
 		max-width: 60%;
-	}
-	.ml-drawer {
-		padding-right: -32%
 	}
 	.ml-card-anchor {
 		width: 30rem;

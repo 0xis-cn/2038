@@ -32,10 +32,8 @@ $mobile-opacity: .7	!default;
 		line-height: 2rem;
 		font-size: 2rem;
 		speak: none;
-
-		&::marker {
-			content: '';
-		}
+		list-style: none;
+		z-index: 100;
 	}
 
 	a {
@@ -69,8 +67,13 @@ $mobile-opacity: .7	!default;
 	}
 
 	.ml-drawer {
-		width: 50%;
-		box-sizing: border-box
+		width: calc(50% - 490px);
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.ml-drawer {
+		width: 18%;
 	}
 }
 

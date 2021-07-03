@@ -1,10 +1,10 @@
 <img src="assets/wordmark.svg" align="right" />
 
+[My blog with 2038](https://mat-ling.fit)
+
 # 2038
 
-![Version 0.1.0 with Gem](https://img.shields.io/badge/gem-0.1.0-519dd9.svg)
-
-[TOC]
+[![Ver 0.1.2 with Gem](https://img.shields.io/badge/gem-0.1.2-519dd9.svg)][gem]
 
 > Twenty years from now you will be more disappointed by the things that you
 > didn't do than by the ones you did do. So, throw off the bowlines. Sail away
@@ -65,5 +65,14 @@ included in the gem.
 * Support of UnicodeMath or ASCIIMath
 * Right-to-left and vertical page
 
+## Contribution
+
+* Submit an [issue][issue-pos] or [pull request][pr-pos]
+* Contact me via [E-mail][mail-pos]
+
+[gem]: https://rubygems.org/gems/jekyll-theme-2038
 [i18n-pos]: https://github.com/0xis-cn/2038/blob/main/_data/theme-2038-i18n.yml
+[issue-pos]: https://github.com/0xis-cn/2038/issues
+[pr-pos]: https://github.com/0xis-cn/2038/pulls
+[mail-pos]: mailto:mat-ling@139.com
 
