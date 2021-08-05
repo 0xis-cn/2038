@@ -34,9 +34,8 @@ rt {
 
 body, button, input, select, textarea, .temp-lang {
 	&:lang(*-Hans) {
-		font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+		font: 300 1em/1.8 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
 	}
-
 	&:lang(cmn-Hans),
 	&:lang(wuu-Hans),
 	&:lang(czh-Hans),
@@ -51,11 +50,30 @@ body, button, input, select, textarea, .temp-lang {
 	&:lang(hsn-Hans),
 	&:lang(cjy-Hans),
 	&:lang(lzh-Hans) {
-		font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+		font: 300 1em/1.8 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
+	}
+	&:lang(*-Hant) {
+		font: 300 1em/1.8 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang TC","Hiragino Sans TC","Noto Sans CJK TC","Source Han Sans TC","Source Han Sans HK","Microsoft Jhenghei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
+	}
+	&:lang(cmn-Hant),
+	&:lang(wuu-Hant),
+	&:lang(czh-Hant),
+	&:lang(hak-Hant),
+	&:lang(yue-Hant),
+	&:lang(nan-Hant),
+	&:lang(cpx-Hant),
+	&:lang(cdo-Hant),
+	&:lang(mnp-Hant),
+	&:lang(zco-Hant),
+	&:lang(gan-Hant),
+	&:lang(hsn-Hant),
+	&:lang(cjy-Hant),
+	&:lang(lzh-Hant) {
+		font: 300 1em/1.8 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang TC","Hiragino Sans TC","Noto Sans CJK TC","Source Han Sans TC","Source Han Sans HK","Microsoft Jhenghei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
 	}
 
 	&:lang(jp) {
-		font: 300 1em/1.8;
+		font: 300 1em/1.8 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang JP","Hiragino Sans JP","Noto Sans CJK JP","Source Han Sans JP","Source Han Sans JP","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
 	}
 }
 
@@ -68,7 +86,7 @@ body, button, input, select, textarea, .temp-lang {
 }
 
 @media print {
-	body {
+	.ml-article {
 		font: 400 12pt / 1.7 'Noto Serif CJK SC', serif,
 			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		background: white;
