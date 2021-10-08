@@ -123,7 +123,15 @@ kbd {
 }
 
 p, table {
-	margin: .9em 0;
+	margin: .75em 0;
+}
+
+.ml-article p {
+	text-indent: 34px;
+}
+
+.footnote p, .ml-article ul p, .ml-article ol p {
+	text-indent: 0;
 }
 
 summary {
@@ -211,5 +219,31 @@ a.ml-card-anchor, a.ml-block-anchor {
 
 ul.ml-page-list {
 	padding: 0;
+}
+
+.ml-smaller.ml-front, h2, h3, h4 {
+	line-height: 1.5rem;
+}
+
+h1.ml-title {
+	font-size: 2em;			// 二号
+}
+
+.ml-article h2, .ml-article h1 {
+	font-size: 1.5em;		// 三号
+	margin-top: 1.5rem; 
+}
+
+.ml-article h3 {
+	font-size: 1.25em;		// 四号
+	margin-top: 1.5rem; 
+}
+
+.ml-article h4 {
+	font-size: 1.125em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
 }
 
