@@ -37,7 +37,7 @@ body, button, input, select, textarea, .temp-lang, h1, h2, h3, h4, h5, h6 {
 
 	&:lang(*-Hans) {
 		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
-		letter-spacing: 1px;
+		letter-spacing: 0.05em;
 	}
 	&:lang(cmn-Hans),
 	&:lang(wuu-Hans),
@@ -54,11 +54,11 @@ body, button, input, select, textarea, .temp-lang, h1, h2, h3, h4, h5, h6 {
 	&:lang(cjy-Hans),
 	&:lang(lzh-Hans) {
 		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
-		letter-spacing: 1px;
+		letter-spacing: 0.05em;
 	}
 	&:lang(*-Hant) {
 		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang TC","Hiragino Sans TC","Noto Sans CJK TC","Source Han Sans TC","Source Han Sans HK","Microsoft Jhenghei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
-		letter-spacing: 1px;
+		letter-spacing: 0.05em;
 	}
 	&:lang(cmn-Hant),
 	&:lang(wuu-Hant),
@@ -75,7 +75,7 @@ body, button, input, select, textarea, .temp-lang, h1, h2, h3, h4, h5, h6 {
 	&:lang(cjy-Hant),
 	&:lang(lzh-Hant) {
 		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang TC","Hiragino Sans TC","Noto Sans CJK TC","Source Han Sans TC","Source Han Sans HK","Microsoft Jhenghei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
-		letter-spacing: 1px;
+		letter-spacing: 0.05em;
 	}
 
 	&:lang(jp) {
@@ -127,7 +127,7 @@ p, table {
 }
 
 .ml-article p {
-	text-indent: 34px;
+	text-indent: 2.1em;
 }
 
 .footnote p, .ml-article ul p, .ml-article ol p {
