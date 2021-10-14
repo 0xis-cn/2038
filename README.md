@@ -1,5 +1,7 @@
 <img src="assets/wordmark.svg" align="right" />
 
+**THIS IS A PERSONAL PROJECT CURRENTLY WITH SOME PROBLEMS. PLEASE CONTACT ME IF YOU WANT TO USE THIS PROJECT.**
+
 [My blog with 2038](https://mat-ling.fit)
 
 # 2038
