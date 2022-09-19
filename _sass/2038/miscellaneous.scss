@@ -38,27 +38,9 @@ rt {
 
 body, button, input, select, textarea, .temp-lang, h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 0;
-
-	&:lang(*-Hans) {
-		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
-		.ml-article p {
-			text-indent: 2em;
-		}
-
-	}
 	&:lang(cmn-Hans),
 	&:lang(wuu-Hans),
-	&:lang(czh-Hans),
-	&:lang(hak-Hans),
 	&:lang(yue-Hans),
-	&:lang(nan-Hans),
-	&:lang(cpx-Hans),
-	&:lang(cdo-Hans),
-	&:lang(mnp-Hans),
-	&:lang(zco-Hans),
-	&:lang(gan-Hans),
-	&:lang(hsn-Hans),
-	&:lang(cjy-Hans),
 	&:lang(lzh-Hans) {
 		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
 		.ml-article p {
@@ -66,26 +48,9 @@ body, button, input, select, textarea, .temp-lang, h1, h2, h3, h4, h5, h6 {
 		}
 
 	}
-	&:lang(*-Hant) {
-		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang TC","Hiragino Sans TC","Noto Sans CJK TC","Source Han Sans TC","Source Han Sans HK","Microsoft Jhenghei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
-		.ml-article p {
-			text-indent: 2em;
-		}
-
-	}
 	&:lang(cmn-Hant),
 	&:lang(wuu-Hant),
-	&:lang(czh-Hant),
-	&:lang(hak-Hant),
 	&:lang(yue-Hant),
-	&:lang(nan-Hant),
-	&:lang(cpx-Hant),
-	&:lang(cdo-Hant),
-	&:lang(mnp-Hant),
-	&:lang(zco-Hant),
-	&:lang(gan-Hant),
-	&:lang(hsn-Hant),
-	&:lang(cjy-Hant),
 	&:lang(lzh-Hant) {
 		font: 300 1em/1.5 -apple-system,"Helvetica Neue","Segoe UI",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","PingFang TC","Hiragino Sans TC","Noto Sans CJK TC","Source Han Sans TC","Source Han Sans HK","Microsoft Jhenghei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
 		.ml-article p {
@@ -146,7 +111,7 @@ p, table {
 }
 
 .ml-article blockquote p, .footnote p, .ml-article ul p, .ml-article ol p {
-	text-indent: 0;
+	text-indent: 0 !important;
 }
 
 summary {
@@ -177,22 +142,8 @@ body, .ml-drawer-inside {
 q {
 	&:lang(cmn-Hans), &:lang(cmn-Hant),
 	&:lang(wuu-Hans), &:lang(wuu-Hant),
-	&:lang(czh-Hans), &:lang(czh-Hant),
-	&:lang(hak-Hans), &:lang(hak-Hant),
 	&:lang(yue-Hans), &:lang(yue-Hant),
-	&:lang(nan-Hans), &:lang(nan-Hant),
-	&:lang(cpx-Hans), &:lang(cpx-Hant),
-	&:lang(cdo-Hans), &:lang(cdo-Hant),
-	&:lang(mnp-Hans), &:lang(mnp-Hant),
-	&:lang(zco-Hans), &:lang(zco-Hant),
-	&:lang(gan-Hans), &:lang(gan-Hant),
-	&:lang(hsn-Hans), &:lang(hsn-Hant),
-	&:lang(cjy-Hans), &:lang(cjy-Hant),
 	&:lang(lzh-Hans), &:lang(lzh-Hant) {
-		quotes: '\300C' '\300D' '\300E' '\300F'
-	}
-
-	&:lang(*-Hans), &:lang(*-Hant) {
 		quotes: '\300C' '\300D' '\300E' '\300F'
 	}
 }
