@@ -1,8 +1,6 @@
 <img src="assets/wordmark.svg" align="right" />
 
-**THIS IS A PERSONAL PROJECT CURRENTLY WITH SOME PROBLEMS. PLEASE CONTACT ME IF YOU WANT TO USE THIS PROJECT.**
-
-[My blog with 2038](https://mat-ling.fit)
+[My blog with 2038](https://matling.fit)
 
 # 2038
 
@@ -58,10 +56,6 @@ BUT WAIT! You have to put [translation file][i18n-pos] manually into `_data`
 directory of your site to correctly display information, for it cannot be
 included in the gem.
 
-## Usage
-
-(To be continued after I fixed most of bugs)
-
 ## Todo
 
 * Support of UnicodeMath or ASCIIMath
@@ -76,5 +70,4 @@ included in the gem.
 [i18n-pos]: https://github.com/0xis-cn/2038/blob/main/_data/theme-2038-i18n.yml
 [issue-pos]: https://github.com/0xis-cn/2038/issues
 [pr-pos]: https://github.com/0xis-cn/2038/pulls
-[mail-pos]: mailto:mat-ling@139.com
-
+[mail-pos]: mailto:thematling@outlook.com
